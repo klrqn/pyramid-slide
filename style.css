@@ -1,4 +1,36 @@
-h1 {
-    color: red;
-    font-family: fantasy;
+body {
+    text-align: center;
+    align-items: center;
+}
+
+.title {
+    background-color: #aa5588;
+    width: 90%;
+    height: 75px;
+    margin: 0 auto;
+}
+
+.title h1 {
+    color: white;
+}
+
+.main {
+    margin: auto;
+    margin-top: 50px;
+    border: #aa5588 2px solid;
+    width: 50%;
+    height: 500px;
+
+}
+
+.forms {
+    background-color: #666666;
+    width: 100%;
+    height: 100px;
+}
+
+.output {
+    background-color: #999999;
+    width: 100%;
+    height: 100%;
 }
