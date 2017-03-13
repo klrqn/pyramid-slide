@@ -13,18 +13,18 @@
         <div class="main">
             <p id="symbolText"> Brick Symbol: </p>
             <div class="forms">
-                <select name="symbols" form="">
-                    <option value="hash">#</option>
-                    <option value="at">@</option>
-                    <option value="x">X</option>
-                    <option value="dollar">$</option>
+                <select id="selectID" onchange="drawPyramid(this.value)">
+                    <option value="#">#</option>
+                    <option value="@">@</option>
+                    <option value="X">X</option>
+                    <option value="$">$</option>
                 </select>
                 <p id="sizeText"> How High: </p>
-                <input type="range" id="pyramidRange" value="5">
-                <p id="numberText">5</p>
+                <input type="range" min="3" max="12" id="pyramidRange" value="5" onchange="drawPyramid(this.value)">
+                <p id="numberText"></p>
             </div>
 
-            <div class="output">
+            <div id="output">
 
             </div>
         </div>
