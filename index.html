@@ -11,20 +11,25 @@
         </div>
 
         <div class="main">
-            <p id="symbolText"> Brick Symbol: </p>
             <div class="forms">
-                <select id="selectID" onchange="drawPyramid(this.value)">
+                <label>
+                    Brick symbol:
+                <select id="symbolType" onchange="drawPyramid(this.value)">
                     <option value="#">#</option>
                     <option value="@">@</option>
                     <option value="X">X</option>
                     <option value="$">$</option>
                 </select>
-                <p id="sizeText"> How High: </p>
-                <input type="range" min="3" max="12" id="pyramidRange" value="5" onchange="drawPyramid(this.value)">
-                <p id="numberText"></p>
+                </label>
+                <label>
+                    How High?
+                    <input type="range" min="3" max="12" id="sliderRange" value="5" onchange="drawPyramid(this.value)">
+                </label>
+                <span id="heightText"></span>
             </div>
 
-            <div id="output">
+
+            <div id="pyramid">
 
             </div>
         </div>
