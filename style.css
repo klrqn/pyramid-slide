@@ -1,6 +1,20 @@
 body {
     text-align: center;
+    width: 800px;
+    margin: auto;
+    padding: 10px;
+    height: auto;
 }
+
+h1 {
+    background-color: #AA5588;
+    border-radius: 3px;
+    height: 100px;
+    margin: auto;
+    line-height: 100px;
+    color: #DCDCDC;
+}
+
 
 .title {
     background-color: #aa5588;
@@ -18,7 +32,7 @@ body {
     margin-top: 50px;
     border: #aa5588 2px solid;
     width: 50%;
-    height: 500px;
+
 
 }
 
@@ -29,9 +43,14 @@ body {
 }
 
 #pyramid {
+    height: max-content;
     background-color: #999999;
     width: 100%;
     line-height: 0;
     text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #AA5588;
+    padding: auto;
 
 }

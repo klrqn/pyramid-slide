@@ -24,22 +24,24 @@ symbol.addEventListener("change", function () {
  */
 function drawPyramid(height, symbol) {
 
-    // clear the old content
+    // first, clear the old content
     document.getElementById("pyramid").innerHTML = "";
 
     // for each row....
-    for (var row = 0; row < height.value; row++) {
+    for (var row = 0; row < height; row++) {
+
         // figure out number of bricks and spaces
         var numBricks = row + 2;
         var numSpaces = height - row - 1;
+
         // build up a string for this row
         var rowStr = "";
         for (var i = 0; i < numSpaces; i++) {
-            var spaceChar = "&nbsp"; // this is the HTML encoding for a space " " "&nbsp"
+            var spaceChar = "&nbsp"; // this is the HTML encoding for a space " "
             rowStr += spaceChar;
         }
         for (var i = 0; i < numBricks; i++) {
-            rowStr += symbol.value;
+            rowStr += symbol;
         }
 
         // make a <p> element for this row, and insert it into the #pyramid container
