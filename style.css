@@ -15,7 +15,6 @@ h1 {
     color: #DCDCDC;
 }
 
-
 .title {
     background-color: #aa5588;
     width: 90%;
@@ -33,13 +32,12 @@ h1 {
     background-color: #ddd;
     border: #aa5588 2px solid;
     width: 50%;
-
 }
 
 .forms {
     background-color: #aaa;
     width: 100%;
-    height: 100px;
+    height: 40px;
 }
 
 #pyramid {
@@ -50,5 +48,4 @@ h1 {
     font-weight: bold;
     color: #AA5588;
     padding: 0;
-
 }
