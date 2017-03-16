@@ -1,12 +1,21 @@
-console.log("sanity check")
 
 var symbol = document.getElementById("symbolType");
 var height = document.getElementById("sliderRange");
-var output = document.getElementById("heightText");
+var heightText = document.getElementById("heightText");
 
-// dispaly initial height and draw pyramid
-height.innerHTML = height.value;
+// display initial height and draw pyramid
+heightText.innerHTML = height.value;
 drawPyramid(parseInt(height.value), symbol.value);
+
+height.addEventListener("input", function() {
+    var heightNum = parseInt(height.value);
+    heightText.innerHTML = height.value;
+    drawPyramid(parseInt(heightNum), symbol.value);
+});
+
+symbol.addEventListener("change", function () {
+    drawPyramid(parseInt(height.value), symbol.value);
+});
 
 /**
  * drawPyramid
@@ -14,13 +23,9 @@ drawPyramid(parseInt(height.value), symbol.value);
  * Renders, in the HTML document, a Mario pyramid of the specified height
  */
 function drawPyramid(height, symbol) {
-    // first, clear the old content
+
+    // clear the old content
     document.getElementById("pyramid").innerHTML = "";
-
-    var symbol = document.getElementById("symbolType");
-    var height = document.getElementById("sliderRange");
-
-    heightText.innerHTML = height.value;
 
     // for each row....
     for (var row = 0; row < height.value; row++) {
@@ -30,7 +35,7 @@ function drawPyramid(height, symbol) {
         // build up a string for this row
         var rowStr = "";
         for (var i = 0; i < numSpaces; i++) {
-            var spaceChar = "WORKDAMNIT"; // this is the HTML encoding for a space " " "&nbsp"
+            var spaceChar = "&nbsp"; // this is the HTML encoding for a space " " "&nbsp"
             rowStr += spaceChar;
         }
         for (var i = 0; i < numBricks; i++) {

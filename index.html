@@ -14,7 +14,7 @@
             <div class="forms">
                 <label>
                     Brick symbol:
-                <select id="symbolType" onchange="drawPyramid(this.value)">
+                <select id="symbolType">
                     <option value="#">#</option>
                     <option value="@">@</option>
                     <option value="X">X</option>
@@ -23,7 +23,7 @@
                 </label>
                 <label>
                     How High?
-                    <input type="range" min="3" max="12" id="sliderRange" value="5" onchange="drawPyramid(this.value)">
+                    <input type="range" min="3" max="12" id="sliderRange" value="5">
                 </label>
                 <span id="heightText"></span>
             </div>
